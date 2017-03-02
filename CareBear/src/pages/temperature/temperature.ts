@@ -11,11 +11,14 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'temperature.html'
 })
 export class TemperaturePage {
+  temperature;
 
   constructor(public navCtrl: NavController) {
+    this.initTemperature();
+  }
 
-
-
+  initTemperature(){
+    this.temperature = 37.5;
   }
 
 }
