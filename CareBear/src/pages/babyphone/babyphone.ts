@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+
+
+
 @Component({
   selector: 'page-babyphone',
   templateUrl: 'babyphone.html'
@@ -16,8 +19,8 @@ export class BabyphonePage {
   promise:any;
 
   constructor(public navCtrl: NavController) {
-    //this.url = "http://akalmultimedia.net:8000/GDNSLDH";
-    this.url = "http://www.opticodec.com/test/tropic.m4a";
+    //this.url = "10.7.40.189:8080/radio.mp3";
+    this.url = "http://10.7.40.11:8080/bear.mp3";
     this.stream = new Audio(this.url);
 
     //this.playStream();
@@ -45,6 +48,9 @@ export class BabyphonePage {
 
   uploadStream() {
     this.stream.pause();
+
   }
+
+
 
 }

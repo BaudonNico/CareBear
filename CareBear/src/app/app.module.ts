@@ -1,10 +1,15 @@
 import { NgModule, ErrorHandler }                   from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp }                                    from './app.component';
+
+//Pages import
 import { TemperaturePage }                          from '../pages/temperature/temperature';
 import { LocationPage }                             from '../pages/location/location';
 import { BabyphonePage }                            from '../pages/babyphone/babyphone';
-import { TabsPage } from '../pages/tabs/tabs';
+import { TabsPage }                                 from '../pages/tabs/tabs';
+
+//Services import
+import { TempService}                               from '../providers/temperature-service';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     BabyphonePage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    TempService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}

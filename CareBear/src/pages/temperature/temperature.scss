@@ -11,7 +11,7 @@ page-temperature{
     width: 100%;
   }
 
-  .thermometer {
+  .thermometer-green {
     display: inline-flex;
     width: 60vw;
     height: 60vw;
@@ -23,6 +23,32 @@ page-temperature{
     align-items: center;
     justify-content: center;
 
+  }
+
+  .thermometer-red {
+    display: inline-flex;
+    width: 60vw;
+    height: 60vw;
+    background-color:rgba(183, 8, 0, 0.52);
+    border-radius: 50%;
+    border: solid 0.5px black;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thermometer-blue {
+    display: inline-flex;
+    width: 60vw;
+    height: 60vw;
+    background-color: rgba(59, 118, 183, 0.52);
+    border-radius: 50%;
+    border: solid 0.5px black;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .temperature {
