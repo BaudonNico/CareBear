@@ -20,7 +20,7 @@ export class BabyphonePage {
 
   constructor(public navCtrl: NavController) {
     //this.url = "10.7.40.189:8080/radio.mp3";
-    this.url = "http://10.7.40.11:8080/bear.mp3";
+    this.url = "http://192.168.43.55:8080/bear.mp3";
     this.stream = new Audio(this.url);
 
     //this.playStream();
@@ -43,14 +43,7 @@ export class BabyphonePage {
 
   pauseStream() {
     this.stream.pause();
+    this.stream.currentTime = 0;
   };
-
-
-  uploadStream() {
-    this.stream.pause();
-
-  }
-
-
 
 }

@@ -5,7 +5,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { Http, Response }  from '@angular/http';
+import { Http }  from '@angular/http';
 
 import { TempService } from '../../providers/temperature-service'
 
@@ -19,24 +19,19 @@ import { TempService } from '../../providers/temperature-service'
 export class TemperaturePage {
   temperature;
   color;
-
-
-
   constructor(public navCtrl: NavController, private http : Http, private tempserv : TempService) {
     this.initTemperature();
+    this.thermometerColor();
+     setInterval(() => {
+        this.initTemperature();
+    }, 2000);
   }
 
-
-
   initTemperature(){
-
     this.tempserv.getTemperature()
       .subscribe( temp => {
-        this.temperature = temp;
-      });
-
-    console.log(this.temperature);
-
+      this.temperature = temp;
+    });
     this.thermometerColor();
   }
 

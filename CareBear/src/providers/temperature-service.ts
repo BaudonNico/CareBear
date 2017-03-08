@@ -21,7 +21,7 @@ export class TempService {
 
   getTemperature(): Observable<string> {
 
-    return this.http.get('http://10.7.40.189/temp/temp.html')
+    return this.http.get('http://192.168.43.55/temp/temp.html')
       .map((response: Response) => response.text());
 
   }
