@@ -4,9 +4,11 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-  <button ion-button icon-only (click)="showMap()"><ion-icon name="pin"></ion-icon></button>
+  <div class="mapButton">
+    <button color="secondary" ion-button icon-only (click)="showMap()"><ion-icon name="pin"></ion-icon></button>
+  </div>
   <div id="mapID"></div>
 
 
