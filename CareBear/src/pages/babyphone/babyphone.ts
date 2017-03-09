@@ -17,33 +17,36 @@ export class BabyphonePage {
   url:string;
   stream:any;
   promise:any;
-
+  play:boolean;
+  pause:boolean;
+  volumeTemp:any;
+  counter : number;
   constructor(public navCtrl: NavController) {
-    //this.url = "10.7.40.189:8080/radio.mp3";
-    this.url = "http://192.168.43.55:8080/bear.mp3";
+    this.play = true
+    //this.url = "http://192.168.0.19:8080/radio.mp3";
+    this.url = "http://192.168.43.136:8080/bear.mp3";
+    //this.url = "http://www.radiodonbosco.org/audio/journal.mp3";
     this.stream = new Audio(this.url);
-
+    this.counter = 0;
+    console.log(this.counter)
     //this.playStream();
   }
 
   playStream() {
-    this.stream.play();
-    this.promise = new Promise((resolve,reject) => {
-      this.stream.addEventListener('playing', () => {
-        resolve(true);
-      });
-
-      this.stream.addEventListener('error', () => {
-        reject(false);
-      });
-    });
-
-    return this.promise;
+    if(this.counter == 0){
+      this.stream.play();
+      this.volumeTemp = this.stream.volume;
+    }
+    this.counter++;
+    this.stream.volume = this.volumeTemp;
+    this.play = false;
+    this.pause = true;
   };
 
   pauseStream() {
-    this.stream.pause();
-    this.stream.currentTime = 0;
+    this.stream.volume = 0;
+    this.play = true;
+    this.pause = false;
   };
 
 }

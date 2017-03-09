@@ -10,13 +10,12 @@ page-babyphone{
     width: 100%;
   }
 
-  .micro-button{
+  .pause-button{
     display: inline-flex;
     width: 20vw;
     height: 20vw;
-    background-color: rgba(59, 118, 183, 0.52);
+    background-color: rgba(183, 8, 0, 0.52);
     border-radius: 50%;
-    border: solid 0.5px black;
     color: white;
     flex-direction: column;
     align-items: center;
@@ -30,13 +29,10 @@ page-babyphone{
     height: 20vw;
     background-color: rgba(59, 118, 183, 0.52);
     border-radius: 50%;
-    border: solid 0.5px black;
     color: white;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
   }
 
 }

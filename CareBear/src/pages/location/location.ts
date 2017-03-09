@@ -17,7 +17,7 @@ import 'leaflet';
 export class LocationPage {
 
   constructor(public navCtrl: NavController) {
-
+  
   }
 
   showMap() : void {

@@ -17,12 +17,12 @@ import { TempService } from '../../providers/temperature-service'
 
 
 export class TemperaturePage {
-  temperature;
-  color;
+  temperature:any;
+  color:any;
   constructor(public navCtrl: NavController, private http : Http, private tempserv : TempService) {
     this.initTemperature();
-    this.thermometerColor();
-     setInterval(() => {
+    this.color = "thermometer-blue";
+    setInterval(() => {
         this.initTemperature();
     }, 2000);
   }
