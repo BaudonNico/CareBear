@@ -3,12 +3,7 @@
  */
 
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
-
-
-
-
 @Component({
   selector: 'page-babyphone',
   templateUrl: 'babyphone.html'
@@ -23,15 +18,10 @@ export class BabyphonePage {
   counter : number;
   constructor(public navCtrl: NavController) {
     this.play = true
-    //this.url = "http://192.168.0.19:8080/radio.mp3";
-    this.url = "http://192.168.43.136:8080/bear.mp3";
-    //this.url = "http://www.radiodonbosco.org/audio/journal.mp3";
+    this.url = "http://192.168.43.55:8080/bear.mp3";
     this.stream = new Audio(this.url);
     this.counter = 0;
-    console.log(this.counter)
-    //this.playStream();
   }
-
   playStream() {
     if(this.counter == 0){
       this.stream.play();
@@ -48,5 +38,4 @@ export class BabyphonePage {
     this.play = true;
     this.pause = false;
   };
-
 }
